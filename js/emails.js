@@ -3,11 +3,9 @@ let busca = document.getElementById("inputBusca")
 let reset = document.getElementById("resetButton")
 
 function getEmails() {
-	fetch("../emails.json")
+	fetch("./emails.json")
 		.then((Response) => Response.json())
 		.then((data) => {
-			// let professores = JSON.parse(data)
-			// console.log(professores)
 			for (const prof in data) {
 				let card = criaCard(prof, data[prof])
 				wrapper.appendChild(card)
