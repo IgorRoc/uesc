@@ -158,7 +158,7 @@ main > div {
 
 .professor:hover .description {
 	margin: 10px 0;
-	max-height: 300px;
+	max-height: 30px;
 }
 
 .sumir {
