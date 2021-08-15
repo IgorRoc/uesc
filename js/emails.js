@@ -11,7 +11,7 @@ busca.addEventListener("input", (e) => {
 			professor
 				.getAttribute("professorname")
 				.toString()
-				.search(busca.value.toLowerCase()) == -1
+				.search(replaceSpecialChars(busca.value).toLowerCase()) == -1
 		) {
 			professor.classList.add("sumir")
 		} else {
