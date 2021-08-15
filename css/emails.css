@@ -165,8 +165,22 @@ main > div {
 	display: none;
 }
 
+
+.fa-spinner{
+	animation: spin 1s infinite ease;
+}
+
 @keyframes rotate360 {
 	to {
 		transform: rotate(-360deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
