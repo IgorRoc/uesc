@@ -74,11 +74,11 @@ busca.addEventListener("input", (e) => {
 			}
 		}
 	}
-    if(!busca.value){
-        reset.classList.add("resetHidden")
-    }else{
-        reset.classList.remove("resetHidden")
-    }
+	if (!busca.value) {
+		reset.classList.add("resetHidden")
+	} else {
+		reset.classList.remove("resetHidden")
+	}
 })
 
 reset.addEventListener("click", () => {
