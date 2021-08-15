@@ -7,13 +7,13 @@ function getEmails() {
 		.then((Response) => Response.json())
 		.then((data) => {
 			for (const prof in data) {
-				let card = criaCard(prof, data[prof])
+				let card = criaCard(prof, data[prof].email, data[prof].nota, data[prof].materias)
 				wrapper.appendChild(card)
 			}
 		})
 }
 
-function criaCard(nome, email) {
+function criaCard(nome, email, nota, materias) {
 	let professor = document.createElement("div")
 	professor.classList.add("professor")
 	professor.setAttribute(
@@ -25,25 +25,42 @@ function criaCard(nome, email) {
 	let arrow = document.createElement("i")
 	arrow.classList.add("fas", "fa-chevron-right")
 	let professorName = document.createElement("h3")
+
 	let description = document.createElement("div")
 	description.classList.add("description")
+
 	let mail = document.createElement("div")
 	mail.classList.add("mail")
 	let envelope = document.createElement("i")
 	envelope.classList.add("fas", "fa-envelope")
 	let link = document.createElement("a")
+	
+	let preferencia = document.createElement("div")
+	preferencia.classList.add("preferencia")
+	let estrela = document.createElement("i")
+	estrela.classList.add("fas", "fa-star")
+	let votacao = document.createElement("p")
 
 	professorName.innerText = nome
 	link.href = `mailto:${email}`
 	link.innerText = email
 
+	votacao.innerText = `${nota}/5`
+
 	title.appendChild(arrow)
 	title.appendChild(professorName)
 
-	mail.appendChild(envelope)
-	mail.appendChild(link)
+	if(email) {
+		mail.appendChild(envelope)
+		mail.appendChild(link)
+		description.appendChild(mail)
+	}
 
-	description.appendChild(mail)
+	if(nota){
+		preferencia.appendChild(estrela)
+		preferencia.appendChild(votacao)
+		description.appendChild(preferencia)
+	}
 
 	professor.appendChild(title)
 	professor.appendChild(description)

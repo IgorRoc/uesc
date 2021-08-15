@@ -81,7 +81,6 @@ main > div {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 20px;
 }
 
 .professor {
@@ -141,7 +140,8 @@ main > div {
 	transition: all 300ms ease;
 }
 
-.professor .mail {
+.professor .mail,
+.professor .preferencia {
 	color: #cacaca;
 
 	display: flex;
@@ -149,12 +149,16 @@ main > div {
 	gap: 20px;
 
 	text-transform: lowercase;
+
+	transition: all 300ms ease;
+
+	cursor: default;
 }
 
 .professor .mail a {
 	color: white;
 	transition: all 300ms ease;
-	
+
 	cursor: pointer;
 }
 
@@ -173,7 +177,7 @@ main > div {
 
 .professor:hover .description {
 	margin: 10px 0;
-	max-height: 30px;
+	max-height: 300px;
 }
 
 .sumir {
