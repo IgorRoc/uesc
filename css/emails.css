@@ -150,6 +150,18 @@ main > div {
 
 .professor .mail a {
 	color: white;
+	transition: all 300ms ease;
+	
+	cursor: pointer;
+}
+
+.professor .mail:hover,
+.professor .mail:hover a{
+	color: aqua;
+}
+
+.professor .preferencia:hover {
+	color: crimson;
 }
 
 .professor:hover {
