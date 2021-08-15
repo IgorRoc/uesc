@@ -4,16 +4,169 @@
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
 	background-color: #36393f;
 }
 
 main {
-	width: 100%;
-	height: 100%;
+	/* width: calc(100% - 40px); */
+
+	padding: 20px;
 
 	display: flex;
 	justify-content: center;
+}
+
+main > div{
+	width: 100%;
+	max-width: 600px;
+}
+
+.busca {
+	overflow: hidden;
+
+	background-color: #202024;
+	box-shadow: 5px 5px 5px #0002;
+
+	border-radius: 5px;
+
+	padding: 0 30px;
+
+	display: flex;
 	align-items: center;
+}
+
+.busca i{
+	font-size: 1.2em;
+}
+
+#resetButton{
+	padding: 10px;
+	border-radius: 50%;
+
+	cursor: pointer;
+
+	transition: all 300ms ease;
+}
+
+#resetButton:hover{
+	background-color: #ffffff08;
+}
+
+.resetHidden {
+	transform: translateX(80px);
+}
+
+.resetRotate{
+	animation: rotate360 500ms ease;
+}
+
+#inputBusca {
+	height: 3em;
+
+	flex-grow: 1;
+	font-size: 1.1em;
+
+	margin: 0 20px;
+
+	background: none;
+	color: white;
+
+	border: none;
+	outline: none;
+}
+
+.wrapperFlex {
+	margin: 20px 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.professor {
+	width: calc(100% - 60px);
+	height: fit-content;
+
+	padding: .5em 30px;
+	border-radius: 5px;
+
+	background-color: #2a2c30;
+	box-shadow: 5px 5px 5px #0002;
+
+	display: flex;
+	flex-direction: column;
+
+	overflow: auto;
+}
+
+.professor > .title {
+	padding: 10px 0;
+
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	color: white;
+}
+
+.professor > .title > h3{
+	cursor: default;
+}
+
+.professor > .title > i {
+	transform: rotate(90deg);
+	transition: all 300ms ease;
+}
+
+.professor:hover .title i {
+	transform: rotate(270deg);
+}
+
+.professor > .description {
+	height: fit-content;
+	max-height: 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	color: white;
+
+	overflow: hidden;
+
+    transition: all 300ms ease;
+}
+
+.professor .mail {
+	color: #cacaca;
+
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	text-transform: lowercase;
+}
+
+.professor .mail a {
+	color: white;
+}
+
+.professor:hover{
+    max-height: 500px;
+}
+
+.professor:hover .description{
+    margin: 10px 0;
+    max-height: 300px;
+}
+
+.sumir{
+	display: none;
+}
+
+@keyframes rotate360 {
+	to{
+		transform: rotate(-360deg);
+	}
 }

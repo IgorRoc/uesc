@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emails de Professores</title>
-    <link rel="stylesheet" href="./css/emails.css">
-    <link rel="stylesheet" href="./css/font.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Emails de Professores</title>
 
-</head>
-<body>
-    
-</body>
+		<link
+			rel="shortcut icon"
+			href="./assets/uesc.png"
+			type="image/x-icon"
+		/>
+
+		<link rel="stylesheet" href="./css/emails.css" />
+		<link rel="stylesheet" href="./css/font.css" />
+		<link rel="stylesheet" href="./css/useful.css" />
+
+		<script
+			src="https://kit.fontawesome.com/e07fba0c03.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div>
+				<div class="busca">
+					<i class="fas fa-search colorWhite"></i>
+					<input
+						id="inputBusca"
+						type="text"
+						placeholder="Buscar professor..."
+					/>
+					<i id="resetButton" class="fas fa-undo-alt colorWhite resetHidden"></i>
+				</div>
+				<div id="wrapperProfessores" class="wrapperFlex">
+					<div class="professor">
+						<div class="title">
+							<i class="fas fa-chevron-right"></i>
+							<h3>Nome</h3>
+						</div>
+						<div class="description">
+							<div class="mail">
+								<i class="fas fa-envelope"></i>
+								<a href="mailto:">contato@uesc.br</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./js/emails.js"></script>
+	</body>
 </html>
