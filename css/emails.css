@@ -88,6 +88,7 @@ main > div {
 	width: calc(100% - 60px);
 	height: fit-content;
 
+	margin: 10px 0;
 	padding: 0.5em 30px;
 	border-radius: 5px;
 
@@ -98,6 +99,8 @@ main > div {
 	flex-direction: column;
 
 	overflow: auto;
+
+	transition: all 100ms ease
 }
 
 .professor > .title {
@@ -174,7 +177,10 @@ main > div {
 }
 
 .sumir {
-	display: none;
+	max-height: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
 }
 
 
