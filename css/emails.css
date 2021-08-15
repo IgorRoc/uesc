@@ -4,7 +4,11 @@
 }
 
 body {
+	height: 100vh;
 	background-color: #36393f;
+
+	display: flex;
+	flex-direction: column;
 }
 
 main {
