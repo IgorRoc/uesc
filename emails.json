@@ -1,4 +1,10 @@
 {
+	"Afonso Henriques": {
+		"email": "henry@uesc.br"
+	},
+	"Álvaro Vinícius de Souza Coelho": {
+		"email": "degas@uesc.br"
+	},
 	"José Carlos Chagas": {
 		"email": "chagas@uesc.br"
 	},
@@ -10,9 +16,6 @@
 	},
 	"Marcelo O Donnell Krause": {
 		"email": "mdkrause@uesc.br"
-	},
-	"Walkíria França Vieira e Teixeira": {
-		"email": "wfveteixeira@uesc.br"
 	},
 	"Vânia Cordeiro da Silva": {
 		"email": "vania@uesc.br"
@@ -71,9 +74,6 @@
 	"Karina Kfouri": {
 		"email": "kksartori@uesc.br"
 	},
-	"Afonso Henriques": {
-		"email": "henry@uesc.br"
-	},
 	"Hélder Conceição Almeida": {
 		"email": "hcalmeida@uesc.br",
 		"nota": "5"
@@ -105,9 +105,6 @@
 	"Gesil Sampaio Amarante Segundo": {
 		"email": "gsamarante@uesc.br"
 	},
-	"Álvaro Vinícius de Souza Coelho": {
-		"email": "degas@uesc.br"
-	},
 	"Clemilda Gonzaga Santos": {
 		"email": "cgsantos@uesc.br"
 	},
@@ -122,5 +119,8 @@
 	},
 	"Luciano Ângelo de Souza Bernardes": {
 		"email": "lasbernardes@uesc.br"
+	},
+	"Walkíria França Vieira e Teixeira": {
+		"email": "wfveteixeira@uesc.br"
 	}
 }

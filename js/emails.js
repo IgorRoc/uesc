@@ -2,72 +2,6 @@ let wrapper = document.querySelector("#wrapperProfessores")
 let busca = document.getElementById("inputBusca")
 let reset = document.getElementById("resetButton")
 
-function getEmails() {
-	fetch("./emails.json")
-		.then((Response) => Response.json())
-		.then((data) => {
-			for (const prof in data) {
-				let card = criaCard(prof, data[prof].email, data[prof].nota, data[prof].materias)
-				wrapper.appendChild(card)
-			}
-		})
-}
-
-function criaCard(nome, email, nota, materias) {
-	let professor = document.createElement("div")
-	professor.classList.add("professor")
-	professor.setAttribute(
-		"professorName",
-		replaceSpecialChars(nome).toLowerCase()
-	)
-	let title = document.createElement("div")
-	title.classList.add("title")
-	let arrow = document.createElement("i")
-	arrow.classList.add("fas", "fa-chevron-right")
-	let professorName = document.createElement("h3")
-
-	let description = document.createElement("div")
-	description.classList.add("description")
-
-	let mail = document.createElement("div")
-	mail.classList.add("mail")
-	let envelope = document.createElement("i")
-	envelope.classList.add("fas", "fa-envelope")
-	let link = document.createElement("a")
-	
-	let preferencia = document.createElement("div")
-	preferencia.classList.add("preferencia")
-	let estrela = document.createElement("i")
-	estrela.classList.add("fas", "fa-star")
-	let votacao = document.createElement("p")
-
-	professorName.innerText = nome
-	link.href = `mailto:${email}`
-	link.innerText = email
-
-	votacao.innerText = `${nota}/5`
-
-	title.appendChild(arrow)
-	title.appendChild(professorName)
-
-	if(email) {
-		mail.appendChild(envelope)
-		mail.appendChild(link)
-		description.appendChild(mail)
-	}
-
-	if(nota){
-		preferencia.appendChild(estrela)
-		preferencia.appendChild(votacao)
-		description.appendChild(preferencia)
-	}
-
-	professor.appendChild(title)
-	professor.appendChild(description)
-
-	return professor
-}
-
 wrapper.children[0].remove()
 getEmails()
 
@@ -107,6 +41,98 @@ reset.addEventListener("click", () => {
 		reset.classList.add("resetHidden")
 	}, 800)
 })
+
+function getEmails() {
+	fetch("./emails.json")
+		.then((Response) => Response.json())
+		.then((data) => {
+			var professoresOrdenados = []
+			for (const prof in data) {
+				professoresOrdenados.push({
+					nome: prof,
+					email: data[prof].email,
+					nota: data[prof].nota,
+					materias: data[prof].materias,
+				})
+			}
+			professoresOrdenados.sort(function (a, b) {
+				let nomeA = replaceSpecialChars(a.nome)
+				let nomeB = replaceSpecialChars(b.nome)
+				if (nomeA > nomeB) {
+					return 1
+				}
+				if (nomeA < nomeB) {
+					return -1
+				}
+				return 0
+			})
+
+			for (const prof of professoresOrdenados) {
+				let card = criaCard(
+					prof.nome,
+					prof.email,
+					prof.nota,
+					prof.materias
+				)
+				wrapper.appendChild(card)
+			}
+		})
+}
+
+function criaCard(nome, email, nota, materias) {
+	let professor = document.createElement("div")
+	professor.classList.add("professor")
+	professor.setAttribute(
+		"professorName",
+		replaceSpecialChars(nome).toLowerCase()
+	)
+	let title = document.createElement("div")
+	title.classList.add("title")
+	let arrow = document.createElement("i")
+	arrow.classList.add("fas", "fa-chevron-right")
+	let professorName = document.createElement("h3")
+
+	let description = document.createElement("div")
+	description.classList.add("description")
+
+	let mail = document.createElement("div")
+	mail.classList.add("mail")
+	let envelope = document.createElement("i")
+	envelope.classList.add("fas", "fa-envelope")
+	let link = document.createElement("a")
+
+	let preferencia = document.createElement("div")
+	preferencia.classList.add("preferencia")
+	let estrela = document.createElement("i")
+	estrela.classList.add("fas", "fa-star")
+	let votacao = document.createElement("p")
+
+	professorName.innerText = nome
+	link.href = `mailto:${email}`
+	link.innerText = email
+
+	votacao.innerText = `${nota}/5`
+
+	title.appendChild(arrow)
+	title.appendChild(professorName)
+
+	if (email) {
+		mail.appendChild(envelope)
+		mail.appendChild(link)
+		description.appendChild(mail)
+	}
+
+	if (nota) {
+		preferencia.appendChild(estrela)
+		preferencia.appendChild(votacao)
+		description.appendChild(preferencia)
+	}
+
+	professor.appendChild(title)
+	professor.appendChild(description)
+
+	return professor
+}
 
 function replaceSpecialChars(str) {
 	str = str.replace(/[ÀÁÂÃÄÅ]/, "A")
