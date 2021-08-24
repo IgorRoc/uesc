@@ -95,12 +95,6 @@ function criaCard(nome, email, nota, materias) {
 	let description = document.createElement("div")
 	description.classList.add("description")
 
-	let mail = document.createElement("div")
-	mail.classList.add("mail")
-	let envelope = document.createElement("i")
-	envelope.classList.add("fas", "fa-envelope")
-	let link = document.createElement("a")
-
 	let preferencia = document.createElement("div")
 	preferencia.classList.add("preferencia")
 	let estrela = document.createElement("i")
@@ -108,8 +102,6 @@ function criaCard(nome, email, nota, materias) {
 	let votacao = document.createElement("p")
 
 	professorName.innerText = nome
-	link.href = `mailto:${email}`
-	link.innerText = email
 
 	votacao.innerText = `${nota}/5`
 
@@ -117,9 +109,35 @@ function criaCard(nome, email, nota, materias) {
 	title.appendChild(professorName)
 
 	if (email) {
-		mail.appendChild(envelope)
-		mail.appendChild(link)
-		description.appendChild(mail)
+		if (typeof email === "object") {
+			email.forEach((e) => {
+				let mail = document.createElement("div")
+				mail.classList.add("mail")
+				let envelope = document.createElement("i")
+				envelope.classList.add("fas", "fa-envelope")
+				let link = document.createElement("a")
+
+				link.href = `mailto:${e}`
+				link.innerText = e
+
+				mail.appendChild(envelope)
+				mail.appendChild(link)
+				description.appendChild(mail)
+			})
+		} else {
+			let mail = document.createElement("div")
+			mail.classList.add("mail")
+			let envelope = document.createElement("i")
+			envelope.classList.add("fas", "fa-envelope")
+			let link = document.createElement("a")
+
+			link.href = `mailto:${email}`
+			link.innerText = email
+
+			mail.appendChild(envelope)
+			mail.appendChild(link)
+			description.appendChild(mail)
+		}
 	}
 
 	if (nota) {
