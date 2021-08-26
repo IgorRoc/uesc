@@ -57,7 +57,10 @@
 		"email": "fmmilian@uesc.br"
 	},
 	"Marta Magda Dornelles": {
-		"email": "mmbertoldi@uesc.br"
+		"email": ["mmbertoldi@uesc.br", "marta.uesc@gmail.com"]
+	},
+	"Leard de Oliveira Fernandes":{
+		"email": "lofernandes@uesc.br"
 	},
 	"Susana M. Iglesias": {
 		"email": "smiglesias@uesc.br"
@@ -70,6 +73,9 @@
 	},
 	"Eduardo Palmeira": {
 		"email": "espalmeira@uesc.br"
+	},
+	"Edgar Alexander": {
+		"email": "ealexander@uesc.br"
 	},
 	"Karina Kfouri": {
 		"email": "kksartori@uesc.br"
