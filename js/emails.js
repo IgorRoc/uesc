@@ -1,6 +1,12 @@
 let wrapper = document.querySelector("#wrapperProfessores")
 let busca = document.getElementById("inputBusca")
 let reset = document.getElementById("resetButton")
+var url = new URL(window.location)
+var nome = url.searchParams.get("nome")
+
+if(nome){
+	buscar(nome)
+}
 
 wrapper.children[0].remove()
 getEmails()
@@ -167,4 +173,23 @@ function replaceSpecialChars(str) {
 	str = str.replace(/[ç]/, "c")
 
 	return str
+}
+
+async function buscar(name){
+	await sleep(500)
+	busca.value = name
+	for (const professor of wrapper.children) {
+		if (
+			professor
+				.getAttribute("professorname")
+				.toString()
+				.search(replaceSpecialChars(busca.value).toLowerCase()) == -1
+		) {
+			professor.classList.add("sumir")
+		} 
+	}
+}
+
+function sleep(ms) {
+	return new Promise((resolve) => setTimeout(resolve, ms))
 }
