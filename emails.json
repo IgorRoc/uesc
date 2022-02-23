@@ -59,7 +59,7 @@
 	"Marta Magda Dornelles": {
 		"email": ["mmbertoldi@uesc.br", "marta.uesc@gmail.com"]
 	},
-	"Leard de Oliveira Fernandes":{
+	"Leard de Oliveira Fernandes": {
 		"email": "lofernandes@uesc.br"
 	},
 	"Susana M. Iglesias": {
@@ -97,7 +97,7 @@
 		"email": "mohonda@uesc.br"
 	},
 	"Francisco Valdece": {
-		"email": ["fvfsousa@uesc.br", "emails@uesc.br"]
+		"email": "fvfsousa@uesc.br"
 	},
 	"Antônio Henrique Figueira Louro": {
 		"email": "louro@uesc.br"
@@ -127,6 +127,6 @@
 		"email": "lasbernardes@uesc.br"
 	},
 	"Walkíria França Vieira e Teixeira": {
-		"email": "wfveteixeira@uesc.br"
+		"email": ["wfveteixeira@uesc.br", "walkiriateixeira@gmail.com"]
 	}
 }
