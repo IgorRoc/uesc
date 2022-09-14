@@ -103,7 +103,7 @@ main > div {
 
 	overflow: auto;
 
-	transition: all 100ms ease
+	transition: all 100ms ease;
 }
 
 .professor > .title {
@@ -167,7 +167,7 @@ main > div {
 }
 
 .professor .mail:hover,
-.professor .mail:hover a{
+.professor .mail:hover a {
 	color: aqua;
 }
 
@@ -191,8 +191,53 @@ main > div {
 	overflow: hidden;
 }
 
+#notFound {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
 
-.fa-spinner{
+	color: white;
+	font-weight: 100;
+}
+#notFound > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 5px;
+}
+
+#notFound > button {
+	background: #0f9e6a;
+	font-size: 1em;
+	border: none;
+	cursor: pointer;
+	padding: 10px 20px;
+	border-radius: 4px;
+	transition: all 100ms ease-out;
+}
+
+#notFound >	button:disabled{
+	cursor: not-allowed;
+	background: #535755;
+	color: #fff;
+	opacity: 0.8;
+}
+
+#notFound >	button:disabled:hover{
+	cursor: not-allowed;
+	background: #535755;
+	color: #fff;
+	opacity: 0.8;
+}
+
+#notFound > button:hover {
+	background: #096e49;
+}
+
+.fa-spinner {
 	animation: spin 1s infinite ease;
 }
 
