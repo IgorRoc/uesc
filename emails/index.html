@@ -18,6 +18,8 @@
 		<link rel="stylesheet" href="../css/font.css" />
 		<link rel="stylesheet" href="../css/footer.css" />
 		<link rel="stylesheet" href="../css/useful.css" />
+		<link rel="stylesheet" href="../css/modal.css" />
+		<link rel="stylesheet" href="../css/button.css" />
 
 		<meta name="keywords" content="uesc, email, professor" />
 		<!-- Primary Meta Tags -->
@@ -62,9 +64,53 @@
 		></script>
 	</head>
 	<body>
-		<!-- <div id="addEmail">
-
-		</div> -->
+		<div id="addEmail" class="hide">
+			<div class="container">
+				<span class="closeModal" onclick="hideModal()">
+					<i class="fa-solid fa-xmark colorRed"></i>
+				</span>
+				<h1>Novo Professor</h1>
+				<form
+					target="_blank"
+					action="https://formsubmit.co/igor_roc@hotmail.com.br"
+					id="formAdd"
+					method="POST"
+				>
+					<div class="input">
+						<input
+							type="text"
+							name="name"
+							id="name"
+							required
+							minlength="3"
+						/>
+						<label for="name">Nome</label>
+					</div>
+					<div class="input">
+						<input type="email" name="email" id="email" required />
+						<label for="email">Email</label>
+					</div>
+					<div class="input">
+						<button type="submit" class="btn btn-primary">
+							Adicionar
+						</button>
+					</div>
+					<input type="hidden" name="_captcha" value="false" />
+					<input type="hidden" name="_template" value="box" />
+					<input type="text" name="_honey" style="display: none" />
+					<input
+						type="hidden"
+						name="_next"
+						value="http://127.0.0.1:5500/thanks/"
+					/>
+					<input
+						type="hidden"
+						name="_subject"
+						value="Novo professor adicionado!"
+					/>
+				</form>
+			</div>
+		</div>
 		<header></header>
 		<main>
 			<div>
@@ -97,12 +143,12 @@
 				<div id="notFound">
 					<div class="text">
 						<p>Não encontrou o seu professor?</p>
-						<p>
-							Mande pra mim e eu irei adicionar o mais rápido
-							possível!
-						</p>
+						<p>Envie-me e adicionarei o mais rápido possível!</p>
 					</div>
-					<button disabled>Adicionar</button>
+					<button class="btn btn-primary btn-icon" onclick="showModal()">
+						<i class="fa-solid fa-user"></i>
+						Novo Professor
+					</button>
 				</div>
 			</div>
 		</main>
@@ -118,5 +164,8 @@
 		</footer>
 
 		<script src="../js/emails.js"></script>
+		<script src="../js/addProf.js"></script>
+		<script src="../js/modal.js"></script>
+		<script src="../js/button.js"></script>
 	</body>
 </html>
