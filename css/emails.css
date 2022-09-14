@@ -118,6 +118,7 @@ main > div {
 
 .professor > .title > h3 {
 	cursor: default;
+	font-weight: 500;
 }
 
 .professor > .title > i {
@@ -219,14 +220,14 @@ main > div {
 	transition: all 100ms ease-out;
 }
 
-#notFound >	button:disabled{
+#notFound > button:disabled {
 	cursor: not-allowed;
 	background: #535755;
 	color: #fff;
 	opacity: 0.8;
 }
 
-#notFound >	button:disabled:hover{
+#notFound > button:disabled:hover {
 	cursor: not-allowed;
 	background: #535755;
 	color: #fff;
