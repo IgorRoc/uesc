@@ -49,7 +49,7 @@ reset.addEventListener("click", () => {
 })
 
 function getEmails() {
-	fetch("./emails.json")
+	fetch("../emails.json")
 		.then((Response) => Response.json())
 		.then((data) => {
 			var professoresOrdenados = []
