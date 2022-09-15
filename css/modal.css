@@ -34,7 +34,7 @@
 	pointer-events: all;
 
 	transform: scale(1);
-	transition: transform 500ms cubic-bezier(0.64, 0.31, 0.4, 1.54);
+	transition: transform 500ms cubic-bezier(.51,.07,.44,1.76);
 }
 
 #addEmail .container h1 {
