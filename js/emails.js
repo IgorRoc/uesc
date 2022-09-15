@@ -4,7 +4,7 @@ let reset = document.getElementById("resetButton")
 var url = new URL(window.location)
 var nome = url.searchParams.get("nome")
 
-if(nome){
+if (nome) {
 	buscar(nome)
 }
 
@@ -13,9 +13,31 @@ getEmails()
 
 busca.addEventListener("input", (e) => {
 	for (const professor of wrapper.children) {
-		if (
+		if (professor.getAttribute("prof_nickname")) {
+			if (
+				professor
+					.getAttribute("prof_name")
+					.toString()
+					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
+					-1 &&
+				professor
+					.getAttribute("prof_nickname")
+					.toString()
+					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
+					-1
+			) {
+				professor.classList.add("sumir")
+			} else {
+				if (
+					e.inputType == "deleteContentBackward" ||
+					e.inputType == "deleteWordBackward"
+				) {
+					professor.classList.remove("sumir")
+				}
+			}
+		} else if (
 			professor
-				.getAttribute("professorname")
+				.getAttribute("prof_name")
 				.toString()
 				.search(replaceSpecialChars(busca.value).toLowerCase()) == -1
 		) {
@@ -58,7 +80,7 @@ function getEmails() {
 					nome: prof,
 					email: data[prof].email,
 					nota: data[prof].nota,
-					materias: data[prof].materias,
+					apelido: data[prof].apelido,
 				})
 			}
 			professoresOrdenados.sort(function (a, b) {
@@ -78,20 +100,23 @@ function getEmails() {
 					prof.nome,
 					prof.email,
 					prof.nota,
-					prof.materias
+					prof.apelido
 				)
 				wrapper.appendChild(card)
 			}
 		})
 }
 
-function criaCard(nome, email, nota, materias) {
+function criaCard(nome, email, nota, apelido) {
 	let professor = document.createElement("div")
 	professor.classList.add("professor")
-	professor.setAttribute(
-		"professorName",
-		replaceSpecialChars(nome).toLowerCase()
-	)
+	professor.setAttribute("prof_name", replaceSpecialChars(nome).toLowerCase())
+	if (apelido) {
+		professor.setAttribute(
+			"prof_nickname",
+			replaceSpecialChars(apelido).toLowerCase()
+		)
+	}
 	let title = document.createElement("div")
 	title.classList.add("title")
 	let arrow = document.createElement("i")
@@ -146,11 +171,11 @@ function criaCard(nome, email, nota, materias) {
 		}
 	}
 
-	if (nota) {
-		preferencia.appendChild(estrela)
-		preferencia.appendChild(votacao)
-		description.appendChild(preferencia)
-	}
+	// if (nota) {
+	// 	preferencia.appendChild(estrela)
+	// 	preferencia.appendChild(votacao)
+	// 	description.appendChild(preferencia)
+	// }
 
 	professor.appendChild(title)
 	professor.appendChild(description)
@@ -175,18 +200,18 @@ function replaceSpecialChars(str) {
 	return str
 }
 
-async function buscar(name){
+async function buscar(name) {
 	await sleep(500)
 	busca.value = name
 	for (const professor of wrapper.children) {
 		if (
 			professor
-				.getAttribute("professorname")
+				.getAttribute("prof_name")
 				.toString()
 				.search(replaceSpecialChars(busca.value).toLowerCase()) == -1
 		) {
 			professor.classList.add("sumir")
-		} 
+		}
 	}
 }
 
