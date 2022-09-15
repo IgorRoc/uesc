@@ -116,6 +116,10 @@ main > div {
 	color: white;
 }
 
+.professor > .title > svg {
+	transition: all 300ms ease;
+}
+
 .professor > .title > h3 {
 	cursor: default;
 	font-weight: 500;
@@ -124,6 +128,10 @@ main > div {
 .professor > .title > i {
 	transform: rotate(90deg);
 	transition: all 300ms ease;
+}
+
+.professor:hover > .title > svg {
+	transform: rotate(90deg);
 }
 
 .professor:hover .title i {
