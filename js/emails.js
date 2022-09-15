@@ -1,73 +1,33 @@
 let wrapper = document.querySelector("#wrapperProfessores")
 let busca = document.getElementById("inputBusca")
-let reset = document.getElementById("resetButton")
 var url = new URL(window.location)
-var nome = url.searchParams.get("nome")
-
-if (nome) {
-	buscar(nome)
-}
+var nome =
+	url.searchParams.get("nome") ||
+	url.searchParams.get("search") ||
+	url.searchParams.get("nick") ||
+	url.searchParams.get("s") ||
+	url.searchParams.get("v")
 
 wrapper.children[0].remove()
 getEmails()
 
-busca.addEventListener("input", (e) => {
-	for (const professor of wrapper.children) {
-		if (professor.getAttribute("prof_nickname")) {
-			if (
-				professor
-					.getAttribute("prof_name")
-					.toString()
-					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
-					-1 &&
-				professor
-					.getAttribute("prof_nickname")
-					.toString()
-					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
-					-1
-			) {
-				professor.classList.add("sumir")
-			} else {
-				if (
-					e.inputType == "deleteContentBackward" ||
-					e.inputType == "deleteWordBackward"
-				) {
-					professor.classList.remove("sumir")
-				}
-			}
-		} else if (
-			professor
-				.getAttribute("prof_name")
-				.toString()
-				.search(replaceSpecialChars(busca.value).toLowerCase()) == -1
-		) {
-			professor.classList.add("sumir")
-		} else {
-			if (
-				e.inputType == "deleteContentBackward" ||
-				e.inputType == "deleteWordBackward"
-			) {
-				professor.classList.remove("sumir")
-			}
-		}
-	}
-	if (!busca.value) {
-		reset.classList.add("resetHidden")
-	} else {
-		reset.classList.remove("resetHidden")
-	}
-})
+if (nome) {
+	sleep(100).then(() => {
+		buscar(nome)
+	})
+}
 
-reset.addEventListener("click", () => {
-	reset.classList.add("resetRotate")
-	busca.value = ""
-	for (const professor of wrapper.children) {
-		professor.classList.remove("sumir")
+busca.addEventListener("input", (e) => {
+	if (
+		e.inputType == "deleteContentBackward" ||
+		e.inputType == "deleteWordBackward"
+	) {
+		for (const professor of wrapper.children) {
+			professor.classList.remove("sumir")
+		}
+	} else {
+		buscar(busca.value)
 	}
-	setTimeout(() => {
-		reset.classList.remove("resetRotate")
-		reset.classList.add("resetHidden")
-	}, 800)
 })
 
 function getEmails() {
@@ -200,11 +160,25 @@ function replaceSpecialChars(str) {
 	return str
 }
 
-async function buscar(name) {
-	await sleep(500)
+function buscar(name) {
 	busca.value = name
 	for (const professor of wrapper.children) {
-		if (
+		if (professor.getAttribute("prof_nickname")) {
+			if (
+				professor
+					.getAttribute("prof_name")
+					.toString()
+					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
+					-1 &&
+				professor
+					.getAttribute("prof_nickname")
+					.toString()
+					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
+					-1
+			) {
+				professor.classList.add("sumir")
+			}
+		} else if (
 			professor
 				.getAttribute("prof_name")
 				.toString()
