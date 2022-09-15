@@ -28,7 +28,5 @@ function showModal() {
 }
 
 function hideModal() {
-	console.log(back)
 	back.classList.add("hide")
-	console.log("hide")
 }

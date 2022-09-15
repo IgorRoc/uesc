@@ -2,7 +2,6 @@ const buttons = document.querySelectorAll(".btn")
 
 const createRipple = (e, button) => {
 	const circle = document.createElement("div")
-    console.log("ripple")
     
 	let d = Math.max(e.currentTarget.clientWidth, e.currentTarget.clientHeight)
 	circle.style.width = circle.style.height = d + "px"
