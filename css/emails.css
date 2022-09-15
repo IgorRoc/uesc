@@ -247,7 +247,7 @@ main > div {
 }
 
 .fa-spinner {
-	animation: spin 1s infinite ease;
+	animation: spin 1s infinite cubic-bezier(.09,-0.01,.89,1);
 }
 
 @keyframes rotate360 {
