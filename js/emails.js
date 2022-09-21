@@ -55,6 +55,16 @@ function getEmails() {
 				return 0
 			})
 
+			// Print ordenado
+			let prof = {}
+			for (const professor of professoresOrdenados) {
+				prof[professor.nome] = {
+					email: professor.email,
+					apelido: professor.apelido,
+				}
+			}
+			console.log(JSON.stringify(prof))
+
 			for (const prof of professoresOrdenados) {
 				let card = criaCard(
 					prof.nome,
