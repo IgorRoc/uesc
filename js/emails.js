@@ -11,12 +11,6 @@ var nome =
 wrapper.children[0].remove()
 getEmails()
 
-if (nome) {
-	sleep(100).then(() => {
-		buscar(nome)
-	})
-}
-
 busca.addEventListener("input", (e) => {
 	buscar(busca.value)
 })
@@ -64,6 +58,13 @@ function getEmails() {
 					prof.apelido
 				)
 				wrapper.appendChild(card)
+			}
+		})
+		.then(() => {
+			if (nome) {
+				sleep(100).then(() => {
+					buscar(nome)
+				})
 			}
 		})
 }
