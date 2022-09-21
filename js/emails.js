@@ -31,7 +31,7 @@ busca.addEventListener("input", (e) => {
 })
 
 function getEmails() {
-	fetch("../emails.json")
+	fetch("../emails/emails.json")
 		.then((Response) => Response.json())
 		.then((data) => {
 			var professoresOrdenados = []
