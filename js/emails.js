@@ -18,16 +18,7 @@ if (nome) {
 }
 
 busca.addEventListener("input", (e) => {
-	if (
-		e.inputType == "deleteContentBackward" ||
-		e.inputType == "deleteWordBackward"
-	) {
-		for (const professor of wrapper.children) {
-			professor.classList.remove("sumir")
-		}
-	} else {
-		buscar(busca.value)
-	}
+	buscar(busca.value)
 })
 
 function getEmails() {
@@ -187,6 +178,8 @@ function buscar(name) {
 					-1
 			) {
 				professor.classList.add("sumir")
+			}else{
+				professor.classList.remove("sumir")
 			}
 		} else if (
 			professor
@@ -195,6 +188,8 @@ function buscar(name) {
 				.search(replaceSpecialChars(busca.value).toLowerCase()) == -1
 		) {
 			professor.classList.add("sumir")
+		} else {
+			professor.classList.remove("sumir")
 		}
 	}
 }
