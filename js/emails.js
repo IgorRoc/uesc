@@ -47,14 +47,14 @@ function getEmails() {
 			})
 
 			// Print ordenado
-			let prof = {}
-			for (const professor of professoresOrdenados) {
-				prof[professor.nome] = {
-					email: professor.email,
-					apelido: professor.apelido,
-				}
-			}
-			console.log(JSON.stringify(prof))
+			// let prof = {}
+			// for (const professor of professoresOrdenados) {
+			// 	prof[professor.nome] = {
+			// 		email: professor.email,
+			// 		apelido: professor.apelido,
+			// 	}
+			// }
+			// console.log(JSON.stringify(prof))
 
 			for (const prof of professoresOrdenados) {
 				let card = criaCard(
@@ -178,7 +178,7 @@ function buscar(name) {
 					-1
 			) {
 				professor.classList.add("sumir")
-			}else{
+			} else {
 				professor.classList.remove("sumir")
 			}
 		} else if (
