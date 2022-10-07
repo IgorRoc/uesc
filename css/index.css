@@ -18,6 +18,12 @@ main {
 	align-items: center;
 }
 
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
 .links {
 	padding: 10px 20px;
 
@@ -30,4 +36,10 @@ main {
 	color: aliceblue;
 	background-color: #2a2c30;
 	box-shadow: 5px 5px 5px #0002;
+	transition: all 300ms ease-out;
+}
+
+.links:hover {
+	background-color: #34363a;
+	box-shadow: 5px 10px 5px #0002;
 }
