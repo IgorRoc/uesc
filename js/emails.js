@@ -94,11 +94,9 @@ function criaCard(nome, email, nota, apelido, img) {
 	image.classList.add("imagem")
 	let imgSrc = document.createElement("img")
 	imgSrc.src = img
+	let showImage = true
 	imgSrc.onerror = (e) => {
-		console.log(`Error when loading ${img}`)
-		console.log(e)
-		image = null
-		img = null
+		showImage = false
 	}
 
 	let preferencia = document.createElement("div")
@@ -155,7 +153,7 @@ function criaCard(nome, email, nota, apelido, img) {
 	professor.appendChild(title)
 	professor.appendChild(description)
 
-	if (img) {
+	if (showImage) {
 		image.appendChild(imgSrc)
 		professor.appendChild(image)
 	}
