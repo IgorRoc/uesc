@@ -54,7 +54,8 @@
 		"email": "fvfsousa@uesc.br"
 	},
 	"Gesil Sampaio Amarante Segundo": {
-		"email": "gsamarante@uesc.br"
+		"email": "gsamarante@uesc.br",
+		"imagem": "https://ipolitica.blog.br/wp-content/uploads/2020/05/IMG-20200522-WA0045.jpg"
 	},
 	"Hamilton José Brumatto": {
 		"email": ["hjbrumatto@uesc.br", "brumatto@yahoo.com.br"]
@@ -73,8 +74,7 @@
 		"email": "chagas@uesc.br"
 	},
 	"José Cláudio Faria": {
-		"email": ["jcfaria@uesc.br", "joseclaudio.faria@gmail.com"],
-		"imagem":"http://rday.leg.ufpr.br/images/Faria2.png"
+		"email": ["jcfaria@uesc.br", "joseclaudio.faria@gmail.com"]
 	},
 	"Karina Kfouri Sartori": {
 		"email": ["kksartori@uesc.br", "karinakfouri@yahoo.com.br"]
