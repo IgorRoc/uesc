@@ -20,7 +20,7 @@ main {
 	justify-content: center;
 }
 
-main > div {
+main>div {
 	width: 100%;
 	max-width: 600px;
 }
@@ -88,6 +88,7 @@ main > div {
 }
 
 .professor {
+	position: relative;
 	width: calc(100% - 60px);
 	height: fit-content;
 
@@ -106,7 +107,7 @@ main > div {
 	transition: all 100ms ease;
 }
 
-.professor > .title {
+.professor>.title {
 	padding: 10px 0;
 
 	display: flex;
@@ -116,21 +117,21 @@ main > div {
 	color: white;
 }
 
-.professor > .title > svg {
+.professor>.title>svg {
 	transition: all 300ms ease;
 }
 
-.professor > .title > h3 {
+.professor>.title>h3 {
 	cursor: default;
 	font-weight: 500;
 }
 
-.professor > .title > i {
+.professor>.title>i {
 	transform: rotate(90deg);
 	transition: all 300ms ease;
 }
 
-.professor:hover > .title > svg {
+.professor:hover>.title>svg {
 	transform: rotate(90deg);
 }
 
@@ -138,7 +139,25 @@ main > div {
 	transform: rotate(270deg);
 }
 
-.professor > .description {
+.professor>.imagem {
+	overflow: hidden;
+	border-radius: 50%;
+	width: auto;
+	height: 90%;
+	background: red;
+	position: absolute;
+	top: 50%;
+	right: 34px;
+	transform: translateY(-50%);
+}
+
+.professor>.imagem>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+
+.professor>.description {
 	height: fit-content;
 	max-height: 0;
 
@@ -210,7 +229,8 @@ main > div {
 	color: white;
 	font-weight: 100;
 }
-#notFound > div {
+
+#notFound>div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -218,7 +238,7 @@ main > div {
 	gap: 5px;
 }
 
-#notFound > button {
+#notFound>button {
 	background: #0f9e6a;
 	font-size: 1em;
 	border: none;
@@ -228,26 +248,26 @@ main > div {
 	transition: all 100ms ease-out;
 }
 
-#notFound > button:disabled {
+#notFound>button:disabled {
 	cursor: not-allowed;
 	background: #535755;
 	color: #fff;
 	opacity: 0.8;
 }
 
-#notFound > button:disabled:hover {
+#notFound>button:disabled:hover {
 	cursor: not-allowed;
 	background: #535755;
 	color: #fff;
 	opacity: 0.8;
 }
 
-#notFound > button:hover {
+#notFound>button:hover {
 	background: #096e49;
 }
 
 .fa-spinner {
-	animation: spin 1s infinite cubic-bezier(.09,-0.01,.89,1);
+	animation: spin 1s infinite cubic-bezier(.09, -0.01, .89, 1);
 }
 
 @keyframes rotate360 {
@@ -260,6 +280,7 @@ main > div {
 	from {
 		transform: rotate(0deg);
 	}
+
 	to {
 		transform: rotate(360deg);
 	}

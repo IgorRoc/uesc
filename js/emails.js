@@ -26,6 +26,7 @@ function getEmails() {
 					email: data[prof].email,
 					nota: data[prof].nota,
 					apelido: data[prof].apelido,
+					imagem: data[prof].imagem
 				})
 			}
 			professoresOrdenados.sort(function (a, b) {
@@ -55,7 +56,8 @@ function getEmails() {
 					prof.nome,
 					prof.email,
 					prof.nota,
-					prof.apelido
+					prof.apelido,
+					prof.imagem
 				)
 				wrapper.appendChild(card)
 			}
@@ -69,7 +71,7 @@ function getEmails() {
 		})
 }
 
-function criaCard(nome, email, nota, apelido) {
+function criaCard(nome, email, nota, apelido, img) {
 	let professor = document.createElement("div")
 	professor.classList.add("professor")
 	professor.setAttribute("prof_name", replaceSpecialChars(nome).toLowerCase())
@@ -88,6 +90,11 @@ function criaCard(nome, email, nota, apelido) {
 	let description = document.createElement("div")
 	description.classList.add("description")
 
+	let image = document.createElement("div")
+	image.classList.add("image")
+	let imgSrc = document.createElement("img")
+	imgSrc.src = img
+
 	let preferencia = document.createElement("div")
 	preferencia.classList.add("preferencia")
 	let estrela = document.createElement("i")
@@ -100,7 +107,7 @@ function criaCard(nome, email, nota, apelido) {
 
 	title.appendChild(arrow)
 	title.appendChild(professorName)
-
+	
 	if (email) {
 		if (typeof email === "object") {
 			email.forEach((e) => {
@@ -142,6 +149,11 @@ function criaCard(nome, email, nota, apelido) {
 	professor.appendChild(title)
 	professor.appendChild(description)
 
+	if (img) {
+		image.appendChild(imgSrc)
+		professor.appendChild(image)
+	}
+
 	return professor
 }
 
@@ -171,12 +183,12 @@ function buscar(name) {
 					.getAttribute("prof_name")
 					.toString()
 					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
-					-1 &&
+				-1 &&
 				professor
 					.getAttribute("prof_nickname")
 					.toString()
 					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
-					-1
+				-1
 			) {
 				professor.classList.add("sumir")
 			} else {
