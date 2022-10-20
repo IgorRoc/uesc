@@ -91,7 +91,7 @@ function criaCard(nome, email, nota, apelido, img) {
 	description.classList.add("description")
 
 	let image = document.createElement("div")
-	image.classList.add("image")
+	image.classList.add("imagem")
 	let imgSrc = document.createElement("img")
 	imgSrc.src = img
 
