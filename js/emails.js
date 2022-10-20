@@ -94,6 +94,10 @@ function criaCard(nome, email, nota, apelido, img) {
 	image.classList.add("imagem")
 	let imgSrc = document.createElement("img")
 	imgSrc.src = img
+	imgSrc.onerror = () => {
+		image = null
+		img = null
+	}
 
 	let preferencia = document.createElement("div")
 	preferencia.classList.add("preferencia")
@@ -107,7 +111,7 @@ function criaCard(nome, email, nota, apelido, img) {
 
 	title.appendChild(arrow)
 	title.appendChild(professorName)
-	
+
 	if (email) {
 		if (typeof email === "object") {
 			email.forEach((e) => {
