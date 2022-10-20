@@ -95,8 +95,11 @@ function criaCard(nome, email, nota, apelido, img) {
 	let imgSrc = document.createElement("img")
 	imgSrc.src = img
 	let showImage = true
+
 	imgSrc.onerror = (e) => {
 		showImage = false
+		image = null
+		imgSrc = null
 	}
 
 	let preferencia = document.createElement("div")
@@ -153,7 +156,7 @@ function criaCard(nome, email, nota, apelido, img) {
 	professor.appendChild(title)
 	professor.appendChild(description)
 
-	if (showImage) {
+	if (showImage && img) {
 		image.appendChild(imgSrc)
 		professor.appendChild(image)
 	}
