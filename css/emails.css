@@ -144,6 +144,7 @@ main>div {
 	border-radius: 20%;
 	width: auto;
 	height: 70%;
+	aspect-ratio: 1;
 	position: absolute;
 	top: 50%;
 	right: 34px;
