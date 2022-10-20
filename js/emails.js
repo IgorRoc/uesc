@@ -94,7 +94,9 @@ function criaCard(nome, email, nota, apelido, img) {
 	image.classList.add("imagem")
 	let imgSrc = document.createElement("img")
 	imgSrc.src = img
-	imgSrc.onerror = () => {
+	imgSrc.onerror = (e) => {
+		console.log(`Error when loading ${img}`)
+		console.log(e)
 		image = null
 		img = null
 	}
