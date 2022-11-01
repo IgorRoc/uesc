@@ -44,10 +44,7 @@
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta
-			property="twitter:url"
-			content="https://uesc.ilrocha.com/"
-		/>
+		<meta property="twitter:url" content="https://uesc.ilrocha.com/" />
 		<meta property="twitter:title" content="Database - UESC" />
 		<meta
 			property="twitter:description"
@@ -115,21 +112,22 @@
 				</form>
 			</div>
 		</div>
-		<header></header>
+		<header>
+			<div class="busca">
+				<i class="fas fa-search colorWhite"></i>
+				<input
+					id="inputBusca"
+					type="text"
+					placeholder="Buscar professor..."
+				/>
+				<i
+					id="resetButton"
+					class="fas fa-undo-alt colorWhite resetHidden"
+				></i>
+			</div>
+		</header>
 		<main>
 			<div>
-				<div class="busca">
-					<i class="fas fa-search colorWhite"></i>
-					<input
-						id="inputBusca"
-						type="text"
-						placeholder="Buscar professor..."
-					/>
-					<i
-						id="resetButton"
-						class="fas fa-undo-alt colorWhite resetHidden"
-					></i>
-				</div>
 				<div id="wrapperProfessores" class="wrapperFlex">
 					<div class="professor">
 						<div class="title">
