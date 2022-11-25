@@ -19,12 +19,12 @@ main {
 	justify-content: center;
 }
 
-main>div {
+main > div {
 	width: 100%;
 	max-width: 600px;
 }
 
-header{
+header {
 	position: fixed;
 	z-index: 999;
 	left: 50%;
@@ -33,7 +33,7 @@ header{
 	max-width: 650px;
 	padding-top: 50px;
 	backdrop-filter: blur(10px);
-	background: linear-gradient(#36393f, #36393f00)
+	background: linear-gradient(#36393f, #36393f00);
 }
 
 .busca {
@@ -118,7 +118,8 @@ header{
 	transition: all 100ms ease;
 }
 
-.professor>.title {
+.professor > .title {
+	width: 80%;
 	padding: 10px 0;
 
 	display: flex;
@@ -128,21 +129,21 @@ header{
 	color: white;
 }
 
-.professor>.title>svg {
+.professor > .title > svg {
 	transition: all 300ms ease;
 }
 
-.professor>.title>h3 {
+.professor > .title > h3 {
 	cursor: default;
 	font-weight: 500;
 }
 
-.professor>.title>i {
+.professor > .title > i {
 	transform: rotate(90deg);
 	transition: all 300ms ease;
 }
 
-.professor:hover>.title>svg {
+.professor:hover > .title > svg {
 	transform: rotate(90deg);
 }
 
@@ -150,7 +151,7 @@ header{
 	transform: rotate(270deg);
 }
 
-.professor>.imagem {
+.professor > .imagem {
 	overflow: hidden;
 	border-radius: 20%;
 	width: auto;
@@ -162,13 +163,13 @@ header{
 	transform: translateY(-50%);
 }
 
-.professor>.imagem>img {
+.professor > .imagem > img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover
+	object-fit: cover;
 }
 
-.professor>.description {
+.professor > .description {
 	height: fit-content;
 	max-height: 0;
 
@@ -241,7 +242,7 @@ header{
 	font-weight: 100;
 }
 
-#notFound>div {
+#notFound > div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -249,7 +250,7 @@ header{
 	gap: 5px;
 }
 
-#notFound>button {
+#notFound > button {
 	background: #0f9e6a;
 	font-size: 1em;
 	border: none;
@@ -259,26 +260,26 @@ header{
 	transition: all 100ms ease-out;
 }
 
-#notFound>button:disabled {
+#notFound > button:disabled {
 	cursor: not-allowed;
 	background: #535755;
 	color: #fff;
 	opacity: 0.8;
 }
 
-#notFound>button:disabled:hover {
+#notFound > button:disabled:hover {
 	cursor: not-allowed;
 	background: #535755;
 	color: #fff;
 	opacity: 0.8;
 }
 
-#notFound>button:hover {
+#notFound > button:hover {
 	background: #096e49;
 }
 
 .fa-spinner {
-	animation: spin 1s infinite cubic-bezier(.09, -0.01, .89, 1);
+	animation: spin 1s infinite cubic-bezier(0.09, -0.01, 0.89, 1);
 }
 
 @keyframes rotate360 {
