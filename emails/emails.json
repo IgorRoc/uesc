@@ -1,7 +1,4 @@
 {
-	"Acácia Gomes Pinho": {
-		"email": "acaciapinho3@hotmail.com"
-	},
 	"Afonso Henriques": {
 		"email": "henry@uesc.br"
 	},
@@ -16,7 +13,7 @@
 		"email": "louro@uesc.br"
 	},
 	"César Alberto Bravo Pariente": {
-		"email": ["cabpariente@uesc.br", "cesarabravop@hotmail.com"]
+		"email": "cabpariente@uesc.br"
 	},
 	"Claudemir Mota da cruz": {
 		"email": "cmcruz@uesc.br"
@@ -25,7 +22,7 @@
 		"email": "cgsantos@uesc.br"
 	},
 	"Dany Sánchez Dominguez": {
-		"email": ["dsdominguez@uesc.br", "dsdominguez@gmail.com"]
+		"email": "dsdominguez@uesc.br"
 	},
 	"Edgar Alexander": {
 		"email": "ealexander@uesc.br"
@@ -36,16 +33,16 @@
 	"Elinaldo de Santos Goes Junior": {
 		"email": "esgjunior@uesc.br",
 		"apelido": "eligod, lelis",
-		"imagem": "https://media-exp1.licdn.com/dms/image/D5603AQF8J6YeeFBiPA/profile-displayphoto-shrink_800_800/0/1631273985681?e=1671667200&v=beta&t=S4DXj8NS5gheCDJXyoO45zqaGt35X1ANQNLOh0WyNSM"
+		"imagem": "https://www.tecnojr.com.br/img/members/elinaldo.png"
 	},
 	"Esbel Tomás Valero Orellana": {
 		"email": "evalero@uesc.br"
 	},
 	"Eurivalda Ribeiro dos Santos Santana": {
-		"email": ["eurivalda@uesc.br", "eurivalda@hotmail.com"]
+		"email": "eurivalda@uesc.br"
 	},
 	"Félix Mas Milian": {
-		"email": ["fmmilian@uesc.br", "fmasmilian@gmail.com"]
+		"email": "fmmilian@uesc.br"
 	},
 	"Flaviana dos Santos Silva": {
 		"email": "fssilva@uesc.br"
@@ -58,26 +55,26 @@
 		"imagem": "https://ipolitica.blog.br/wp-content/uploads/2020/05/IMG-20200522-WA0045.jpg"
 	},
 	"Hamilton José Brumatto": {
-		"email": ["hjbrumatto@uesc.br", "brumatto@yahoo.com.br"]
+		"email": "hjbrumatto@uesc.br"
 	},
 	"Hélder Conceição Almeida": {
 		"email": "hcalmeida@uesc.br",
-		"imagem": "https://media-exp1.licdn.com/dms/image/C4E03AQFfLYV8cefnRw/profile-displayphoto-shrink_800_800/0/1596123002322?e=1671667200&v=beta&t=UFS3L-QnmLDuopIHPWGBD-20wrqUX2rxphfsHWlTxVQ"
+		"imagem": "https://www.tecnojr.com.br/img/members/helder.png"
 	},
 	"Jauberth Weyll Abijaude": {
-		"email": ["jauberth@uesc.br", "jauberth@gmail.com"]
+		"email": "jauberth@uesc.br"
 	},
 	"Jorge Lima de Oliveira Filho": {
-		"email": ["jlofilho@uesc.br", "jorgelima@gmail.com"]
+		"email": "jlofilho@uesc.br"
 	},
 	"José Carlos Chagas": {
 		"email": "chagas@uesc.br"
 	},
 	"José Cláudio Faria": {
-		"email": ["jcfaria@uesc.br", "joseclaudio.faria@gmail.com"]
+		"email": "jcfaria@uesc.br"
 	},
 	"Karina Kfouri Sartori": {
-		"email": ["kksartori@uesc.br", "karinakfouri@yahoo.com.br"]
+		"email": "kksartori@uesc.br"
 	},
 	"Leard de Oliveira Fernandes": {
 		"email": "lofernandes@uesc.br"
@@ -89,20 +86,20 @@
 		"email": "lcpaula@uesc.br"
 	},
 	"Luciano Ângelo de Souza Bernardes": {
-		"email": ["lasbernardes@uesc.br", "lbernardes@gmail.com"]
+		"email": "lasbernardes@uesc.br"
 	},
 	"Marcelo O'Donnell Krause": {
-		"email": ["mdkrause@uesc.br", "krausefisico@outlook.com"]
+		"email": "mdkrause@uesc.br"
 	},
 	"Marcelo Ossamu Honda": {
 		"email": "mohonda@uesc.br"
 	},
 	"Marta Magda Dornelles": {
-		"email": ["mmbertoldi@uesc.br", "marta.uesc@gmail.com"],
+		"email": "mmbertoldi@uesc.br",
 		"apelido": "Martinha"
 	},
 	"Martha Ximena Torres Delgado": {
-		"email": ["mxtd@uesc.br", "mxtd2000@yahoo.com.br"]
+		"email": "mxtd@uesc.br"
 	},
 	"Mathias Santos de Brito": {
 		"email": "msbrito@uesc.br"
@@ -119,26 +116,23 @@
 	"Ricardo Martin Bentin Zacarias": {
 		"email": "rbentin@uesc.br"
 	},
-	"Romenique da Rocha Silva": {
-		"email": "rrocha26@gmail.com"
-	},
 	"Sérgio Fred Ribeiro Andrade": {
 		"email": "sergiof@uesc.br"
 	},
 	"Susana Marrero Iglesias": {
-		"email": ["smiglesias@uesc.br", "smiglesias1975@gmail.com"]
+		"email": "smiglesias@uesc.br"
 	},
 	"Trícia Souto Santos": {
 		"email": "tssantos@uesc.br"
 	},
 	"Vânia Cordeiro da Silva": {
-		"email": ["vania@uesc.br", "vaniacordeirodasilva@gmail.com"]
+		"email": "vania@uesc.br"
 	},
 	"Vera Lucia Merlini": {
-		"email": ["vlmerlini@uesc.br", "vera.merlini@gmail.com"]
+		"email": "vlmerlini@uesc.br"
 	},
 	"Walkíria França Vieira e Teixeira": {
-		"email": ["wfveteixeira@uesc.br", "walkiriateixeira@gmail.com"]
+		"email": "wfveteixeira@uesc.br"
 	},
 	"Zina Angelica Caceres Benavides": {
 		"email": "zacbenavides@uesc.br"
