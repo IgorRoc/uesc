@@ -8,11 +8,7 @@
 
 		<title>Emails de Professores</title>
 
-		<link
-			rel="shortcut icon"
-			href="../assets/uesc.png"
-			type="image/x-icon"
-		/>
+		<link rel="shortcut icon" href="../assets/uesc.png" type="image/x-icon" />
 
 		<link rel="stylesheet" href="../css/emails.css" />
 		<link rel="stylesheet" href="../css/font.css" />
@@ -26,7 +22,7 @@
 		<meta name="title" content="Database - UESC" />
 		<meta
 			name="description"
-			content="Faça a busca de email de professores"
+			content="Encontre seu professor em uma busca! O nosso banco de dados de e-mails de professores da UESC é a solução perfeita. Navegue facilmente pela plataforma e encontre o professor ideal para suas necessidades acadêmicas."
 		/>
 
 		<!-- Open Graph / Facebook -->
@@ -35,12 +31,9 @@
 		<meta property="og:title" content="Database - UESC" />
 		<meta
 			property="og:description"
-			content="Faça a busca de email de professores"
+			content="Encontre seu professor em uma busca! O nosso banco de dados de e-mails de professores da UESC é a solução perfeita. Navegue facilmente pela plataforma e encontre o professor ideal para suas necessidades acadêmicas."
 		/>
-		<meta
-			property="og:image"
-			content="http://uesc.ilrocha.com/assets/uesc.png"
-		/>
+		<meta property="og:image" content="http://uesc.ilrocha.com/assets/banner_emails.png" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -48,17 +41,11 @@
 		<meta property="twitter:title" content="Database - UESC" />
 		<meta
 			property="twitter:description"
-			content="Faça a busca de email de professores"
+			content="Encontre seu professor em uma busca! O nosso banco de dados de e-mails de professores da UESC é a solução perfeita. Navegue facilmente pela plataforma e encontre o professor ideal para suas necessidades acadêmicas."
 		/>
-		<meta
-			property="twitter:image"
-			content="http://uesc.ilrocha.com/assets/uesc.png"
-		/>
+		<meta property="twitter:image" content="http://uesc.ilrocha.com/assets/banner_emails.png" />
 
-		<script
-			src="https://kit.fontawesome.com/e07fba0c03.js"
-			crossorigin="anonymous"
-		></script>
+		<script src="https://kit.fontawesome.com/e07fba0c03.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id="addEmail" class="hide">
@@ -74,13 +61,7 @@
 					method="POST"
 				>
 					<div class="input">
-						<input
-							type="text"
-							name="name"
-							id="name"
-							required
-							minlength="3"
-						/>
+						<input type="text" name="name" id="name" required minlength="3" />
 						<label for="name">Nome *</label>
 					</div>
 					<div class="input">
@@ -92,38 +73,21 @@
 						<label for="apelido">Apelido</label>
 					</div>
 					<div class="input">
-						<button type="submit" class="btn btn-primary">
-							Adicionar
-						</button>
+						<button type="submit" class="btn btn-primary">Adicionar</button>
 					</div>
 					<input type="hidden" name="_captcha" value="false" />
 					<input type="hidden" name="_template" value="box" />
 					<input type="text" name="_honey" style="display: none" />
-					<input
-						type="hidden"
-						name="_next"
-						value="https://uesc.ilrocha.com/thanks/"
-					/>
-					<input
-						type="hidden"
-						name="_subject"
-						value="Novo professor adicionado!"
-					/>
+					<input type="hidden" name="_next" value="https://uesc.ilrocha.com/thanks/" />
+					<input type="hidden" name="_subject" value="Novo professor adicionado!" />
 				</form>
 			</div>
 		</div>
 		<header>
 			<div class="busca">
 				<i class="fas fa-search colorWhite"></i>
-				<input
-					id="inputBusca"
-					type="text"
-					placeholder="Buscar professor..."
-				/>
-				<i
-					id="resetButton"
-					class="fas fa-undo-alt colorWhite resetHidden"
-				></i>
+				<input id="inputBusca" type="text" placeholder="Buscar professor..." />
+				<i id="resetButton" class="fas fa-undo-alt colorWhite resetHidden"></i>
 			</div>
 		</header>
 		<main>
@@ -138,8 +102,7 @@
 							<div class="mail" style="text-transform: unset">
 								<i class="fas fa-envelope"></i>
 								<a href="mailto:igor_roc@hotmail.com.br">
-									Demorando muito? Clique aqui e me mande um
-									email!
+									Demorando muito? Clique aqui e me mande um email!
 								</a>
 							</div>
 						</div>
@@ -150,10 +113,7 @@
 						<p>Não encontrou o seu professor?</p>
 						<p>Envie-me e adicionarei o mais rápido possível!</p>
 					</div>
-					<button
-						class="btn btn-primary btn-icon"
-						onclick="showModal()"
-					>
+					<button class="btn btn-primary btn-icon" onclick="showModal()">
 						<i class="fa-solid fa-user"></i>
 						Novo Professor
 					</button>
@@ -164,8 +124,7 @@
 		<footer>
 			<div>
 				<p>
-					Feito com <i class="fas fa-heart"></i> e
-					<i class="fas fa-coffee"></i> por
+					Feito com <i class="fas fa-heart"></i> e <i class="fas fa-coffee"></i> por
 					<a target="_blank" href="https://ilrocha.com">Igor Rocha</a>
 				</p>
 			</div>
