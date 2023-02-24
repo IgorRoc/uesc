@@ -25,6 +25,14 @@ backEmail.addEventListener("click", () => {
 	hideModalEmail()
 })
 
+modalFilter.addEventListener("click", (evt) => {
+	evt.stopPropagation()
+})
+
+backFilter.addEventListener("click", () => {
+	hideModalFilter()
+})
+
 function showModalEmail() {
 	backEmail.classList.remove("hide")
 }
