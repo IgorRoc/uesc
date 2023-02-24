@@ -8,6 +8,7 @@ var nome =
 	url.searchParams.get("nick") ||
 	url.searchParams.get("s") ||
 	url.searchParams.get("v")
+let filtros = ["CIC", "DIR"]
 
 getEmails()
 
@@ -61,7 +62,7 @@ async function getEmails() {
 		})
 }
 
-function criaCard({ nome, email, nota, apelido, img, curso }) {
+function criaCard({ nome, email, nota, apelido, imagem, curso }) {
 	let professor = document.createElement("div")
 	professor.classList.add("professor")
 	professor.setAttribute("prof_name", replaceSpecialChars(nome).toLowerCase())
@@ -83,7 +84,7 @@ function criaCard({ nome, email, nota, apelido, img, curso }) {
 	let image = document.createElement("div")
 	image.classList.add("imagem")
 	let imgSrc = document.createElement("img")
-	imgSrc.src = img
+	imgSrc.src = imagem
 	let showImage = true
 
 	imgSrc.onerror = (e) => {
@@ -146,7 +147,7 @@ function criaCard({ nome, email, nota, apelido, img, curso }) {
 	professor.appendChild(title)
 	professor.appendChild(description)
 
-	if (showImage && img) {
+	if (showImage && imagem) {
 		image.appendChild(imgSrc)
 		professor.appendChild(image)
 	}
@@ -205,7 +206,8 @@ function buscar(name) {
 function filtrar() {
 	let filtrosElement = document.querySelectorAll("#filterForm input")
 
-	let filtros = []
+	filtros = []
+
 	filtrosElement.forEach((filtro) => {
 		if (filtro.checked) {
 			filtros.push(filtro.value)
