@@ -12,21 +12,31 @@ inputs.forEach((input) => {
 	})
 })
 
-let back = document.querySelector("#addEmail")
-let modal = document.querySelector(".container")
+let backEmail = document.querySelector("#addEmail")
+let backFilter = document.querySelector("#filter")
+let modalEmail = document.querySelector("#addEmail .container")
+let modalFilter = document.querySelector("#filter .container")
 
-modal.addEventListener("click", (evt) => {
+modalEmail.addEventListener("click", (evt) => {
 	evt.stopPropagation()
 })
 
-back.addEventListener("click", () => {
-	hideModal()
+backEmail.addEventListener("click", () => {
+	hideModalEmail()
 })
 
-function showModal() {
-	back.classList.remove("hide")
+function showModalEmail() {
+	backEmail.classList.remove("hide")
 }
 
-function hideModal() {
-	back.classList.add("hide")
+function hideModalEmail() {
+	backEmail.classList.add("hide")
+}
+
+function showModalFilter() {
+	backFilter.classList.remove("hide")
+}
+
+function hideModalFilter() {
+	backFilter.classList.add("hide")
 }

@@ -1,4 +1,5 @@
 let wrapper = document.querySelector("#wrapperProfessores")
+let loadingState = document.querySelector("#loadingState")
 let busca = document.getElementById("inputBusca")
 var url = new URL(window.location)
 var nome =
@@ -8,15 +9,16 @@ var nome =
 	url.searchParams.get("s") ||
 	url.searchParams.get("v")
 
-wrapper.children[0].remove()
 getEmails()
 
 busca.addEventListener("input", (e) => {
 	buscar(busca.value)
 })
 
-function getEmails() {
-	fetch("../emails/emails.json")
+async function getEmails() {
+	// fake delay to show loading
+	await sleep(2000)
+	await fetch("../emails/emails.json")
 		.then((Response) => Response.json())
 		.then((data) => {
 			var professoresOrdenados = []
@@ -26,7 +28,8 @@ function getEmails() {
 					email: data[prof].email,
 					nota: data[prof].nota,
 					apelido: data[prof].apelido,
-					imagem: data[prof].imagem
+					imagem: data[prof].imagem,
+					curso: data[prof].curso,
 				})
 			}
 			professoresOrdenados.sort(function (a, b) {
@@ -41,24 +44,8 @@ function getEmails() {
 				return 0
 			})
 
-			// Print ordenado
-			// let prof = {}
-			// for (const professor of professoresOrdenados) {
-			// 	prof[professor.nome] = {
-			// 		email: professor.email,
-			// 		apelido: professor.apelido,
-			// 	}
-			// }
-			// console.log(JSON.stringify(prof))
-
 			for (const prof of professoresOrdenados) {
-				let card = criaCard(
-					prof.nome,
-					prof.email,
-					prof.nota,
-					prof.apelido,
-					prof.imagem
-				)
+				let card = criaCard(prof)
 				wrapper.appendChild(card)
 			}
 		})
@@ -69,17 +56,20 @@ function getEmails() {
 				})
 			}
 		})
+		.then(() => {
+			loadingState.remove()
+		})
 }
 
-function criaCard(nome, email, nota, apelido, img) {
+function criaCard({ nome, email, nota, apelido, img, curso }) {
 	let professor = document.createElement("div")
 	professor.classList.add("professor")
 	professor.setAttribute("prof_name", replaceSpecialChars(nome).toLowerCase())
 	if (apelido) {
-		professor.setAttribute(
-			"prof_nickname",
-			replaceSpecialChars(apelido).toLowerCase()
-		)
+		professor.setAttribute("prof_nickname", replaceSpecialChars(apelido).toLowerCase())
+	}
+	if (curso) {
+		professor.setAttribute("prof_curso", curso)
 	}
 	let title = document.createElement("div")
 	title.classList.add("title")
@@ -189,13 +179,11 @@ function buscar(name) {
 				professor
 					.getAttribute("prof_name")
 					.toString()
-					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
-				-1 &&
+					.search(replaceSpecialChars(busca.value).toLowerCase()) == -1 &&
 				professor
 					.getAttribute("prof_nickname")
 					.toString()
-					.search(replaceSpecialChars(busca.value).toLowerCase()) ==
-				-1
+					.search(replaceSpecialChars(busca.value).toLowerCase()) == -1
 			) {
 				professor.classList.add("sumir")
 			} else {
@@ -212,6 +200,31 @@ function buscar(name) {
 			professor.classList.remove("sumir")
 		}
 	}
+}
+
+function filtrar() {
+	let filtrosElement = document.querySelectorAll("#filterForm input")
+
+	let filtros = []
+	filtrosElement.forEach((filtro) => {
+		if (filtro.checked) {
+			filtros.push(filtro.value)
+		}
+	})
+
+	for (const professor of wrapper.children) {
+		if (filtros.length > 0) {
+			if (filtros.includes(professor.getAttribute("prof_curso"))) {
+				professor.classList.remove("sumir")
+			} else {
+				professor.classList.add("sumir")
+			}
+		} else {
+			professor.classList.remove("sumir")
+		}
+	}
+
+	hideModalFilter()
 }
 
 function sleep(ms) {

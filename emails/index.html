@@ -51,7 +51,7 @@
 	<body>
 		<div id="addEmail" class="hide">
 			<div class="container">
-				<span class="closeModal" onclick="hideModal()">
+				<span class="closeModal" onclick="hideModalEmail()">
 					<i class="fa-solid fa-xmark colorRed"></i>
 				</span>
 				<h1>Novo Professor</h1>
@@ -84,17 +84,43 @@
 				</form>
 			</div>
 		</div>
+		<div id="filter" class="hide">
+			<div class="container">
+				<span class="closeModal" onclick="hideModalFilter()">
+					<i class="fa-solid fa-xmark colorRed"></i>
+				</span>
+				<h1>Filtro</h1>
+				<form id="filterForm" onsubmit="filtrar(e)">
+					<div class="wrapper">
+						<h3>Curso</h3>
+						<div class="inputC">
+							<input type="checkbox" name="curso" id="cic" value="CIC" checked />
+							<label for="cic">Ciência da Computação</label>
+						</div>
+						<div class="inputC">
+							<input type="checkbox" name="curso" id="dir" value="DIR" checked />
+							<label for="dir">Direito</label>
+						</div>
+					</div>
+					<button type="button" onclick="filtrar()">Filtrar</button>
+				</form>
+			</div>
+		</div>
 		<header>
 			<div class="busca">
 				<i class="fas fa-search colorWhite"></i>
 				<input id="inputBusca" type="text" placeholder="Buscar professor..." />
 				<i id="resetButton" class="fas fa-undo-alt colorWhite resetHidden"></i>
 			</div>
+			<button class="filterButton" onclick="showModalFilter()">
+				<i class="fa-solid fa-filter"></i>
+				<span>Filtro</span>
+			</button>
 		</header>
 		<main>
 			<div>
 				<div id="wrapperProfessores" class="wrapperFlex">
-					<div class="professor">
+					<div class="professor" id="loadingState">
 						<div class="title">
 							<i class="fas fa-spinner"></i>
 							<h3>Carregando banco de dados</h3>
@@ -114,7 +140,7 @@
 						<p>Não encontrou o seu professor?</p>
 						<p>Envie-me e adicionarei o mais rápido possível!</p>
 					</div>
-					<button class="btn btn-primary btn-icon" onclick="showModal()">
+					<button class="btn btn-primary btn-icon" onclick="showModalEmail()">
 						<i class="fa-solid fa-user"></i>
 						Novo Professor
 					</button>

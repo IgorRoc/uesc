@@ -1,7 +1,8 @@
+#filter,
 #addEmail {
 	/* display: none; */
 	position: fixed;
-	z-index: 1;
+	z-index: 999;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -18,11 +19,13 @@
 	transition: background-color 300ms ease-out;
 }
 
+#filter.hide,
 #addEmail.hide {
 	background-color: #00000000;
 	pointer-events: none;
 }
 
+#filter .container,
 #addEmail .container {
 	padding: 50px 60px;
 	border-radius: 5px;
@@ -34,9 +37,10 @@
 	pointer-events: all;
 
 	transform: scale(1);
-	transition: transform 500ms cubic-bezier(.51,.07,.44,1.76);
+	transition: transform 500ms cubic-bezier(0.51, 0.07, 0.44, 1.76);
 }
 
+#filter .container h1,
 #addEmail .container h1 {
 	margin-bottom: 40px;
 }
@@ -47,17 +51,40 @@
 	gap: 20px;
 }
 
+#filter.hide .container,
 #addEmail.hide .container {
 	transition: transform 300ms ease-out;
 	transform: scale(0);
 }
 
-.container .closeModal{
+.container .closeModal {
 	position: absolute;
 	top: 15px;
 	right: 15px;
 	cursor: pointer;
 	font-size: 1.5em;
+}
+
+#filterForm .wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	align-items: start;
+}
+
+#filterForm button {
+	background: var(--primary-color);
+	font: inherit;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	margin-top: 1em;
+	transition: all 300ms ease-out;
+}
+#filterForm button:hover {
+	background: var(--primary-color-hover);
 }
 
 .input {
@@ -93,8 +120,7 @@
 	cursor: text;
 	-webkit-transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
 	transition: color 0.2s ease-out, -webkit-transform 0.2s ease-out;
-	transition: transform 0.2s ease-out, color 0.2s ease-out,
-		-webkit-transform 0.2s ease-out;
+	transition: transform 0.2s ease-out, color 0.2s ease-out, -webkit-transform 0.2s ease-out;
 	-webkit-transform-origin: 0% 100%;
 	transform-origin: 0% 100%;
 	text-align: initial;
