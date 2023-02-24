@@ -46,6 +46,8 @@
 }
 
 #formAdd {
+	max-height: 300px;
+	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -94,6 +96,7 @@
 .input input {
 	background-color: transparent;
 	border: none;
+	color: white;
 	border-bottom: 1px solid #9e9e9e;
 	border-radius: 0;
 	outline: none;
