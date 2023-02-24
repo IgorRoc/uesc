@@ -130,10 +130,10 @@
 
 .input.active label {
 	transform: translateY(-1em) scale(0.7);
-	color: #0f9e6a;
+	color: var(--primary-color);
 }
 
 .input.active input {
-	border-bottom: 1px solid #0f9e6a;
-	box-shadow: 0 1px 0 0 #0f9e6a;
+	border-bottom: 1px solid var(--primary-color);
+	box-shadow: 0 1px 0 0 var(--primary-color);
 }
