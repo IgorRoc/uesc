@@ -1,143 +1,192 @@
 {
+	"Teste": {
+		"curso": "DIR",
+		"email": "teste@uesc.br"
+	},
 	"Afonso Henriques": {
+		"curso": "CIC",
 		"email": "henry@uesc.br"
 	},
 	"Álvaro Vinícius de Souza Coelho": {
+		"curso": "CIC",
 		"email": "degas@uesc.br",
 		"apelido": "degas"
 	},
 	"Ana Paula de Almeida Andrade": {
+		"curso": "CIC",
 		"email": "apaula@uesc.br"
 	},
 	"Antônio Henrique Figueira Louro": {
+		"curso": "CIC",
 		"email": "louro@uesc.br"
 	},
 	"César Alberto Bravo Pariente": {
+		"curso": "CIC",
 		"email": "cabpariente@uesc.br"
 	},
 	"Claudemir Mota da cruz": {
+		"curso": "CIC",
 		"email": "cmcruz@uesc.br"
 	},
 	"Clemilda Gonzaga Santos": {
+		"curso": "CIC",
 		"email": "cgsantos@uesc.br"
 	},
 	"Dany Sánchez Dominguez": {
+		"curso": "CIC",
 		"email": "dsdominguez@uesc.br"
 	},
 	"Edgar Alexander": {
+		"curso": "CIC",
 		"email": "ealexander@uesc.br"
 	},
 	"Eduardo Silva Palmeira": {
+		"curso": "CIC",
 		"email": "espalmeira@uesc.br"
 	},
 	"Elinaldo de Santos Goes Junior": {
+		"curso": "CIC",
 		"email": "esgjunior@uesc.br",
 		"apelido": "eligod, lelis",
 		"imagem": "https://www.tecnojr.com.br/img/members/elinaldo.png"
 	},
 	"Esbel Tomás Valero Orellana": {
+		"curso": "CIC",
 		"email": "evalero@uesc.br"
 	},
 	"Eurivalda Ribeiro dos Santos Santana": {
+		"curso": "CIC",
 		"email": "eurivalda@uesc.br"
 	},
 	"Félix Mas Milian": {
+		"curso": "CIC",
 		"email": "fmmilian@uesc.br"
 	},
 	"Flaviana dos Santos Silva": {
+		"curso": "CIC",
 		"email": "fssilva@uesc.br"
 	},
 	"Francisco Bruno Souza Oliveira": {
+		"curso": "CIC",
 		"email": "fbsoliveira@uesc.br"
 	},
 	"Francisco Valdece": {
+		"curso": "CIC",
 		"email": "fvfsousa@uesc.br"
 	},
 	"Gesil Sampaio Amarante Segundo": {
+		"curso": "CIC",
 		"email": "gsamarante@uesc.br",
 		"imagem": "https://ipolitica.blog.br/wp-content/uploads/2020/05/IMG-20200522-WA0045.jpg"
 	},
 	"Hamilton José Brumatto": {
+		"curso": "CIC",
 		"email": "hjbrumatto@uesc.br"
 	},
 	"Hélder Conceição Almeida": {
+		"curso": "CIC",
 		"email": "hcalmeida@uesc.br",
 		"imagem": "https://www.tecnojr.com.br/img/members/helder.png"
 	},
 	"Jauberth Weyll Abijaude": {
+		"curso": "CIC",
 		"email": "jauberth@uesc.br"
 	},
 	"Jorge Lima de Oliveira Filho": {
+		"curso": "CIC",
 		"email": "jlofilho@uesc.br"
 	},
 	"José Carlos Chagas": {
+		"curso": "CIC",
 		"email": "chagas@uesc.br"
 	},
 	"José Cláudio Faria": {
+		"curso": "CIC",
 		"email": "jcfaria@uesc.br"
 	},
 	"Karina Kfouri Sartori": {
+		"curso": "CIC",
 		"email": "kksartori@uesc.br"
 	},
 	"Leard de Oliveira Fernandes": {
+		"curso": "CIC",
 		"email": "lofernandes@uesc.br"
 	},
 	"Lilia Marta Brandão Soussa Modesto": {
+		"curso": "CIC",
 		"email": "lilia@uesc.br"
 	},
 	"Luciana Cláudia de Paula": {
+		"curso": "CIC",
 		"email": "lcpaula@uesc.br"
 	},
 	"Luciano Ângelo de Souza Bernardes": {
+		"curso": "CIC",
 		"email": "lasbernardes@uesc.br"
 	},
 	"Marcelo O'Donnell Krause": {
+		"curso": "CIC",
 		"email": "mdkrause@uesc.br"
 	},
 	"Marcelo Ossamu Honda": {
+		"curso": "CIC",
 		"email": "mohonda@uesc.br"
 	},
 	"Marta Magda Dornelles": {
+		"curso": "CIC",
 		"email": "mmbertoldi@uesc.br",
 		"apelido": "Martinha"
 	},
 	"Martha Ximena Torres Delgado": {
+		"curso": "CIC",
 		"email": "mxtd@uesc.br"
 	},
 	"Mathias Santos de Brito": {
+		"curso": "CIC",
 		"email": "msbrito@uesc.br"
 	},
 	"Paulo André Sperandio Giacomin": {
+		"curso": "CIC",
 		"email": "pasgiacomin@uesc.br"
 	},
 	"Paulo Eduardo Ambrósio": {
+		"curso": "CIC",
 		"email": "peambrosio@uesc.br"
 	},
 	"Raimundo Jorge Zumaeta Costa": {
+		"curso": "CIC",
 		"email": "zumaetacosta@uesc.br"
 	},
 	"Ricardo Martin Bentin Zacarias": {
+		"curso": "CIC",
 		"email": "rbentin@uesc.br"
 	},
 	"Sérgio Fred Ribeiro Andrade": {
+		"curso": "CIC",
 		"email": "sergiof@uesc.br"
 	},
 	"Susana Marrero Iglesias": {
+		"curso": "CIC",
 		"email": "smiglesias@uesc.br"
 	},
 	"Trícia Souto Santos": {
+		"curso": "CIC",
 		"email": "tssantos@uesc.br"
 	},
 	"Vânia Cordeiro da Silva": {
+		"curso": "CIC",
 		"email": "vania@uesc.br"
 	},
 	"Vera Lucia Merlini": {
+		"curso": "CIC",
 		"email": "vlmerlini@uesc.br"
 	},
 	"Walkíria França Vieira e Teixeira": {
+		"curso": "CIC",
 		"email": "wfveteixeira@uesc.br"
 	},
 	"Zina Angelica Caceres Benavides": {
+		"curso": "CIC",
 		"email": "zacbenavides@uesc.br"
 	}
 }
