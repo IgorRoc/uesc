@@ -1,0 +1,5 @@
+:root {
+	--primary-color: hsl(158, 83%, 34%);
+	--primary-color-hover: hsl(158, 83%, 24%);
+	--secondary-color: #9e9e9e;
+}
