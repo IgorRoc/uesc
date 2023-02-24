@@ -50,13 +50,14 @@
 		/>
 		<meta property="twitter:image" content="http://uesc.ilrocha.com/assets/banner_emails.png" />
 
-		<script src="https://kit.fontawesome.com/e07fba0c03.js" crossorigin="anonymous"></script>
+		<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 	</head>
 	<body>
 		<div id="addEmail" class="hide">
 			<div class="container">
 				<span class="closeModal" onclick="hideModalEmail()">
-					<i class="fa-solid fa-xmark colorRed"></i>
+					<iconify-icon icon="ic:round-close" class="colorRed"></iconify-icon>
 				</span>
 				<h1>Novo Professor</h1>
 				<form
@@ -91,7 +92,7 @@
 		<div id="filter" class="hide">
 			<div class="container">
 				<span class="closeModal" onclick="hideModalFilter()">
-					<i class="fa-solid fa-xmark colorRed"></i>
+					<iconify-icon icon="ic:round-close" class="colorRed"></iconify-icon>
 				</span>
 				<h1>Filtro</h1>
 				<form id="filterForm" onsubmit="filtrar(e)">
@@ -112,12 +113,12 @@
 		</div>
 		<header>
 			<div class="busca">
-				<i class="fas fa-search colorWhite"></i>
+				<iconify-icon icon="material-symbols:search-rounded"></iconify-icon>
 				<input id="inputBusca" type="text" placeholder="Buscar professor..." />
 				<i id="resetButton" class="fas fa-undo-alt colorWhite resetHidden"></i>
 			</div>
 			<button class="filterButton" onclick="showModalFilter()">
-				<i class="fa-solid fa-filter"></i>
+				<iconify-icon icon="material-symbols:filter-alt"></iconify-icon>
 				<span>Filtro</span>
 			</button>
 		</header>
@@ -126,12 +127,15 @@
 				<div id="wrapperProfessores" class="wrapperFlex">
 					<div class="professor" id="loadingState">
 						<div class="title">
-							<i class="fas fa-spinner"></i>
+							<iconify-icon
+								icon="icomoon-free:spinner"
+								class="fa-spinner"
+							></iconify-icon>
 							<h3>Carregando banco de dados</h3>
 						</div>
 						<div class="description">
 							<div class="mail" style="text-transform: unset">
-								<i class="fas fa-envelope"></i>
+								<iconify-icon icon="material-symbols:mail-rounded"></iconify-icon>
 								<a href="mailto:igor_roc@hotmail.com.br">
 									Demorando muito? Clique aqui e me mande um email!
 								</a>
@@ -145,7 +149,7 @@
 						<p>Envie-me e adicionarei o mais rápido possível!</p>
 					</div>
 					<button class="btn btn-primary btn-icon" onclick="showModalEmail()">
-						<i class="fa-solid fa-user"></i>
+						<iconify-icon icon="ic:baseline-person"></iconify-icon>
 						Novo Professor
 					</button>
 				</div>
@@ -155,7 +159,8 @@
 		<footer>
 			<div>
 				<p>
-					Feito com <i class="fas fa-heart"></i> e <i class="fas fa-coffee"></i> por
+					Feito com <iconify-icon icon="mdi:cards-heart"></iconify-icon> e
+					<iconify-icon icon="mdi:coffee"></iconify-icon> por
 					<a target="_blank" href="https://ilrocha.com">Igor Rocha</a>
 				</p>
 			</div>

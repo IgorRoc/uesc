@@ -5,7 +5,7 @@
 
 body {
 	height: 100vh;
-	background-color: #36393f;
+	background-color: var(--background-color);
 
 	display: flex;
 	flex-direction: column;
@@ -41,6 +41,7 @@ header {
 .busca {
 	overflow: hidden;
 
+	color: white;
 	background-color: #202024;
 	box-shadow: 5px 5px 5px #0002;
 
@@ -155,26 +156,17 @@ header {
 	color: white;
 }
 
-.professor > .title > svg {
-	transition: all 300ms ease;
-}
-
 .professor > .title > h3 {
 	cursor: default;
 	font-weight: 500;
 }
 
-.professor > .title > i {
-	transform: rotate(90deg);
+.professor > .title > .arrow {
 	transition: all 300ms ease;
 }
 
-.professor:hover > .title > svg {
+.professor:hover .title .arrow {
 	transform: rotate(90deg);
-}
-
-.professor:hover .title i {
-	transform: rotate(270deg);
 }
 
 .professor > .imagem {
@@ -234,7 +226,7 @@ header {
 
 .professor .mail:hover,
 .professor .mail:hover a {
-	color: aqua;
+	color: var(--primary-color-light);
 }
 
 .professor .preferencia:hover {
