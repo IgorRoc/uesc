@@ -63,96 +63,42 @@ async function getEmails() {
 }
 
 function criaCard({ nome, email, nota, apelido, imagem, curso }) {
-	let professor = document.createElement("div")
-	professor.classList.add("professor")
-	professor.setAttribute("prof_name", replaceSpecialChars(nome).toLowerCase())
-	if (apelido) {
-		professor.setAttribute("prof_nickname", replaceSpecialChars(apelido).toLowerCase())
-	}
-	if (curso) {
-		professor.setAttribute("prof_curso", curso)
-	}
-	let title = document.createElement("div")
-	title.classList.add("title")
-	let arrow = document.createElement("i")
-	arrow.classList.add("fas", "fa-chevron-right")
-	let professorName = document.createElement("h3")
+	let placeholder = document.createElement("div")
 
-	let description = document.createElement("div")
-	description.classList.add("description")
-
-	let image = document.createElement("div")
-	image.classList.add("imagem")
-	let imgSrc = document.createElement("img")
-	imgSrc.src = imagem
-	let showImage = true
-
-	imgSrc.onerror = (e) => {
-		showImage = false
-		image = null
-		imgSrc = null
-	}
-
-	let preferencia = document.createElement("div")
-	preferencia.classList.add("preferencia")
-	let estrela = document.createElement("i")
-	estrela.classList.add("fas", "fa-star")
-	let votacao = document.createElement("p")
-
-	professorName.innerText = nome
-
-	votacao.innerText = `${nota}/5`
-
-	title.appendChild(arrow)
-	title.appendChild(professorName)
-
-	if (email) {
-		if (typeof email === "object") {
-			email.forEach((e) => {
-				let mail = document.createElement("div")
-				mail.classList.add("mail")
-				let envelope = document.createElement("i")
-				envelope.classList.add("fas", "fa-envelope")
-				let link = document.createElement("a")
-
-				link.href = `mailto:${e}`
-				link.innerText = e
-
-				mail.appendChild(envelope)
-				mail.appendChild(link)
-				description.appendChild(mail)
-			})
-		} else {
-			let mail = document.createElement("div")
-			mail.classList.add("mail")
-			let envelope = document.createElement("i")
-			envelope.classList.add("fas", "fa-envelope")
-			let link = document.createElement("a")
-
-			link.href = `mailto:${email}`
-			link.innerText = email
-
-			mail.appendChild(envelope)
-			mail.appendChild(link)
-			description.appendChild(mail)
+	let html = `
+	<div class="professor"
+	prof_name="${replaceSpecialChars(nome).toLowerCase()}"
+	prof_nickname="${apelido ? replaceSpecialChars(apelido).toLowerCase() : ""}"
+	prof_curso="${curso ? curso : ""}">
+		<div class="title">
+			<iconify-icon icon="material-symbols:chevron-right-rounded" class="arrow" width="24"></iconify-icon>
+			<h3>${nome}</h3>
+		</div>
+		<div class="description">
+			<div class="mail">
+				<iconify-icon icon="mdi:email"></iconify-icon>
+				<a href="mailto:${email}">${email}</a>
+			</div>
+			<!--
+			<div class="mail">
+				<iconify-icon icon="mdi:academic-cap"></iconify-icon>
+				<span>${curso}</span>
+			</div>
+			-->
+		</div>
+		${
+			imagem
+				? `<div class="imagem">
+		<img src="${imagem}" alt="Foto de ${nome}">
+	</div>`
+				: ""
 		}
-	}
+	</div>
+	`
 
-	// if (nota) {
-	// 	preferencia.appendChild(estrela)
-	// 	preferencia.appendChild(votacao)
-	// 	description.appendChild(preferencia)
-	// }
+	placeholder.innerHTML = html
 
-	professor.appendChild(title)
-	professor.appendChild(description)
-
-	if (showImage && imagem) {
-		image.appendChild(imgSrc)
-		professor.appendChild(image)
-	}
-
-	return professor
+	return placeholder.firstElementChild
 }
 
 function replaceSpecialChars(str) {
@@ -175,6 +121,7 @@ function replaceSpecialChars(str) {
 function buscar(name) {
 	busca.value = name
 	for (const professor of wrapper.children) {
+		console.log(professor)
 		if (professor.getAttribute("prof_nickname")) {
 			if (
 				professor

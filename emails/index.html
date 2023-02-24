@@ -71,12 +71,16 @@
 						<label for="name">Nome *</label>
 					</div>
 					<div class="input">
+						<input type="text" name="apelido" id="apelido" />
+						<label for="apelido">Apelido</label>
+					</div>
+					<div class="input">
 						<input type="email" name="email" id="email" required />
 						<label for="email">Email *</label>
 					</div>
 					<div class="input">
-						<input type="text" name="apelido" id="apelido" />
-						<label for="apelido">Apelido</label>
+						<input type="text" name="curso" id="curso" required />
+						<label for="curso">Curso *</label>
 					</div>
 					<div class="input">
 						<button type="submit" class="btn btn-primary">Adicionar</button>
@@ -146,7 +150,7 @@
 				<div id="notFound">
 					<div class="text">
 						<p>Não encontrou o seu professor?</p>
-						<p>Envie-me e adicionarei o mais rápido possível!</p>
+						<p>Clique no botão baixo e adicionarei o mais rápido possível!</p>
 					</div>
 					<button class="btn btn-primary btn-icon" onclick="showModalEmail()">
 						<iconify-icon icon="ic:baseline-person"></iconify-icon>
