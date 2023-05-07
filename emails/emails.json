@@ -1,8 +1,4 @@
 {
-	"Teste": {
-		"curso": "DIR",
-		"email": "teste@uesc.br"
-	},
 	"Afonso Henriques": {
 		"curso": "CIC",
 		"email": "henry@uesc.br"
@@ -196,5 +192,118 @@
 	"Zina Angelica Caceres Benavides": {
 		"curso": "CIC",
 		"email": "zacbenavides@uesc.br"
+	},
+	"Adriano Salume Lessa": {
+		"curso": "DIR"
+	},
+	"Antônio Carlos Alves Macedo": {
+		"curso": "DIR"
+	},
+	"Antônio Carlos Luz Costa": {
+		"curso": "DIR",
+		"email": "aclcosta@uesc.br"
+	},
+	"Carlos Roberto Guimarães": {
+		"curso": "DIR",
+		"email": "crguimaraes@uesc.br",
+		"apelido": "beto"
+	},
+	"Clodoaldo Silva da Anunciação": {
+		"curso": "DIR"
+	},
+	"Eurisa Maria Santana": {
+		"curso": "DIR",
+		"email": "eurisa@uesc.br"
+	},
+	"Fernanda Viana Lima": {
+		"curso": "DIR",
+		"email": "fvlima@uesc.br"
+	},
+	"Francisco Valdece Ferreira de Souza": {
+		"curso": "DIR",
+		"email": "valdece@fvadvogados.adv.br"
+	},
+	"Giselle Boaventura Barros": {
+		"curso": "DIR"
+	},
+	"Guilhardes de Jesus Júnior": {
+		"curso": "DIR",
+		"email": "guilhardes@uesc.br"
+	},
+	"Harrison Ferreira Leite": {
+		"curso": "DIR"
+	},
+	"Helvécio Giudice Argôllo": {
+		"curso": "DIR",
+		"email": "hgargollo@uesc.br"
+	},
+	"Homero Chiaraba Gouveia": {
+		"curso": "DIR",
+		"email": "homerohcgouveia@uesc.br"
+	},
+	"Inocêncio de Carvalho Santana ": {
+		"curso": "DIR"
+	},
+	"Ivone Maia de Mello": {
+		"curso": "DIR",
+		"email": "immello@uesc.br"
+	},
+	"João Vargas Leal Junior": {
+		"curso": "DIR",
+		"email": "jvlealjr@uesc.br"
+	},
+	"José Cairo Junior": {
+		"curso": "DIR"
+	},
+	"Lucas Penal": {
+		"curso": "DIR"
+	},
+	"Laurício Alves Carvalho Pedrosa": {
+		"curso": "DIR"
+	},
+	"Lílian de Brito Santos": {
+		"curso": "DIR"
+	},
+	"Luana Paixão Dantas do Rosário": {
+		"curso": "DIR",
+		"email": "lpdrosario@uesc.br"
+	},
+	"Luis Carlos do Nascimento": {
+		"curso": "DIR"
+	},
+	"Marcelo dos Santos da Silva": {
+		"curso": "DIR",
+		"email": "masilva@uesc.br"
+	},
+	"Marcos Antônio Santos Bandeira": {
+		"curso": "DIR"
+	},
+	"Otávio Augustus Carmo": {
+		"curso": "DIR"
+	},
+	"Pedro Germano dos Anjos": {
+		"curso": "DIR",
+		"email": "pganjos@uesc.br"
+	},
+	"Raildes Pereira Santos": {
+		"curso": "DIR",
+		"email": "raisa@uesc.br"
+	},
+	"Samene Batista": {
+		"curso": "DIR",
+		"email": "samenebatista@gmail.com"
+	},
+	"Saskya Miranda Lopes": {
+		"curso": "DIR"
+	},
+	"Valdir Farias Mesquita": {
+		"curso": "DIR"
+	},
+	"Wagner de Oliveira Rodrigues": {
+		"curso": "DIR",
+		"email": "worodrigues@uesc.br"
+	},
+	"Wilma Alves Santos Vivas": {
+		"curso": "DIR"
 	}
 }

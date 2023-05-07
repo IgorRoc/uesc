@@ -18,7 +18,7 @@ busca.addEventListener("input", (e) => {
 
 async function getEmails() {
 	// fake delay to show loading
-	await sleep(2000)
+	await sleep(500)
 	await fetch("../emails/emails.json")
 		.then((Response) => Response.json())
 		.then((data) => {
@@ -77,7 +77,12 @@ function criaCard({ nome, email, nota, apelido, imagem, curso }) {
 		<div class="description">
 			<div class="mail">
 				<iconify-icon icon="mdi:email"></iconify-icon>
-				<a href="mailto:${email}">${email}</a>
+				${
+					email
+						? `<a href="mailto:${email}">${email}</a>`
+						: `<span>Não encontrei o email dele(a)</span>`
+				}
+				
 			</div>
 			<!--
 			<div class="mail">
